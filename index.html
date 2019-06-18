@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- jsPdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -30,53 +32,7 @@
             </ul>
         </div>
     </nav>
-    <!-- CHANGE THIS! -->
-    <!-- <form action="http://localhost:5000/save" action="post">
-        <input type='date' name="date" />
-        <input type='text' name='contractor' />
-        <input type='text' name='owner' />
-        <input type='text' name='job_address' />
-        <input type='text' name='job_city' />
-        <input type='text' name='lot' />
-        <input type='text' name='block' />
-        <input type='text' name='subdivision' />
-        <input type='text' name='num' />
-        <input type='text' name='job' />
-        <hr>
-        <input type='text' name='name' />
-        <input type='text' name='labor' />
-        <input type='text' name='material' />
-        <input type='text' name='total' />
-        <input type='text' name='bill_address' />
-        <input type='text' name='bill_city' />
-        <input type='text' name='bill_state' />
-        <input type='text' name='bill_zip' />
-        <input type='text' name='bill_email' />
-        <input type='text' name='bid_notes' />
-        <hr>
-        <input type='text' name='half' />
-        <input type='text' name='five' />
-        <input type='text' name='sqr' />
-        <input type='text' name='bull' />
-        <input type='text' name='masking' />
-        <input type='text' name='plastic' />
-        <input type='text' name='fixall' />
-        <input type='text' name='perf' />
-        <input type='text' name='mud' />
-        <input type='text' name='other_name' />
-        <input type='text' name='other_cost' />
-        <input type='text' name='misc' />
-        <input type='text' name='shop_fee' />
-        <input type='text' name='materials_total' />
-        <input type='text' name='scheduling' />
-        <input type='text' name='total_hrs' />
-        <input type='text' name='percent_builder' />
-        <input type='text' name='percent_drywall' />
-        <input type='text' name='notes' />
-        <hr>
-        <input type="submit" class="btn btn-outline-success" onclick="save();return false;"/>
-        <hr>
-    </form> -->
+    
     <div class="jumbotron">
         <h1 class="display-3">Job Sheet!</h1>
         <p class="lead">Fill out this form knuckle-head!</p>
@@ -84,7 +40,7 @@
         <p>
             <form action="http://localhost:5000/save" action="post">
                 Job
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         date <input type='date' name='date' />
                     </div>
@@ -92,7 +48,7 @@
                         contractor <input type='text' name='contractor' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         owner <input type='text' name='owner' />
                     </div>
@@ -100,7 +56,7 @@
                         job_address <input type='text' name='job_address' />
                     </div>
                 </div>      
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         job_city <input type='text' name='job_city' />
                     </div>
@@ -108,7 +64,7 @@
                         lot <input type='text' name='lot' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         block <input type='text' name='block' />
                     </div>
@@ -116,7 +72,7 @@
                         subdivision <input type='text' name='subdivision' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         num <input type='text' name='num' />
                     </div>
@@ -126,7 +82,7 @@
                 </div>
                 <hr>
                 Bid
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         name <input type='text' name='name' />
                     </div>
@@ -134,7 +90,7 @@
                         labor <input type='text' name='labor' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         material <input type='text' name='material' />
                     </div>
@@ -142,7 +98,7 @@
                         total <input type='text' name='total' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         bill_address <input type='text' name='bill_address' />
                     </div>
@@ -150,7 +106,7 @@
                         bill_city <input type='text' name='bill_city' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         bill_state <input type='text' name='bill_state' />
                     </div>
@@ -158,7 +114,7 @@
                         bill_zip <input type='text' name='bill_zip' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
                         bill_email <input type='text' name='bill_email' />
                     </div>
@@ -168,7 +124,7 @@
                 </div>
                 <hr>
                 Material
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         half <input type='text' name='half' />
                     </div>
@@ -176,7 +132,7 @@
                         five <input type='text' name='five' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         sqr <input type='text' name='sqr' />
                     </div>
@@ -184,7 +140,7 @@
                         bull <input type='text' name='bull' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         masking <input type='text' name='masking' />
                     </div>
@@ -192,7 +148,7 @@
                         plastic <input type='text' name='plastic' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         fixall <input type='text' name='fixall' />
                     </div>
@@ -200,7 +156,7 @@
                         perf <input type='text' name='perf' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         mud <input type='text' name='mud' />
                     </div>
@@ -208,7 +164,7 @@
                         other_name <input type='text' name='other_name' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         other_cost <input type='text' name='other_cost' />
                     </div>
@@ -216,7 +172,7 @@
                         misc <input type='text' name='misc' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         shop_fee <input type='text' name='shop_fee' />
                     </div>
@@ -224,7 +180,7 @@
                         materials_total <input type='text' name='materials_total' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         scheduling <input type='text' name='scheduling' />
                     </div>
@@ -232,7 +188,7 @@
                         total_hrs <input type='text' name='total_hrs' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         percent_builder <input type='text' name='percent_builder' />
                     </div>
@@ -240,7 +196,7 @@
                         percent_drywall <input type='text' name='percent_drywall' />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
                         notes <input type='text' name='notes' />
                     </div>
@@ -260,28 +216,49 @@
     <p id="output">unchanged</p>
 
     <script>
-    function save()
-    {
-        let localUrl = 'http://localhost:5000/save';
-        //creating object to send in post req
-        const obj = {};
-        let inputs = document.getElementsByTagName('input');
-        for( let i = 0; i < inputs.length; i++)
+        let save = () =>
         {
-            obj[inputs[i].name] = inputs[i].value;
-        }
-        $.ajax({
-            type: 'POST',
-            // make sure you respect the same origin policy with this url:
-            // http://en.wikipedia.org/wiki/Same_origin_policy
-            url: 'https://major-drywall.herokuapp.com/save',
-            data: obj,
-            success: function(msg){
-                document.querySelector('#output').innerHTML = JSON.stringify(msg);
+            let localUrl = 'http://localhost:5000/save';
+            //creating object to send in post req
+            const obj = {};
+            let inputs = document.getElementsByTagName('input');
+            for( let i = 0; i < inputs.length; i++)
+            {
+                obj[inputs[i].name] = inputs[i].value;
             }
-        });
-    } 
-    
+            $.ajax({
+                type: 'POST',
+                // make sure you respect the same origin policy with this url:
+                // http://en.wikipedia.org/wiki/Same_origin_policy
+                url: 'https://major-drywall.herokuapp.com/save',
+                data: obj,
+                success: function(msg){
+                    document.querySelector('#output').innerHTML = JSON.stringify(msg);
+                    generatePDF(msg);
+                }
+            });
+        } 
+
+        let generatePDF = (o) =>
+        {
+            console.log(o);
+            let doc = new jsPDF();
+            let x = 10, y = 10;
+            y = writeObjToPDF(doc, o['job'], x, y);
+            y = writeObjToPDF(doc, o['billing'], x, y);
+            y = writeObjToPDF(doc, o['material'], x, y);
+            doc.save('test.pdf');
+        };
+        
+        let writeObjToPDF = (PDF,o,x,y) =>
+        {
+            for(let a in o)
+            {
+                PDF.text(`${a} : ${o[a]}`, x, y);
+                y += 7
+            }
+            return  y;
+        };
     </script>
 
 <!-- <form>

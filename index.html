@@ -83,47 +83,80 @@
         <hr class="my-4">
         <p>
             <form action="http://localhost:5000/save" action="post">
-                <input type='date' name="date" />
-                <input type='text' name='contractor' />
-                <input type='text' name='owner' />
-                <input type='text' name='job_address' />
-                <input type='text' name='job_city' />
-                <input type='text' name='lot' />
-                <input type='text' name='block' />
-                <input type='text' name='subdivision' />
-                <input type='text' name='num' />
-                <input type='text' name='job' />
+                Job
+                <div class="row">
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
+                        date <input type='date' name='date' />
+                    </div>
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">
+                        contractor <input type='text' name='contractor' />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
+                        owner <input type='text' name='owner' />
+                    </div>
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
+                        job_address <input type='text' name='job_address' />
+                    </div>
+                </div>      
+                <div class="row">
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
+                        job_city <input type='text' name='job_city' />
+                    </div>
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
+                        lot <input type='text' name='lot' />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
+                        block <input type='text' name='block' />
+                    </div>
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
+                        subdivision <input type='text' name='subdivision' />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
+                        num <input type='text' name='num' />
+                    </div>
+                    <div class="col-sm" style="width: 45vw !important; padding-left 8px; padding-right 8px;margin 8px;">    
+                        job <input type='text' name='job' />
+                    </div>
+                </div>
                 <hr>
-                <input type='text' name='name' />
-                <input type='text' name='labor' />
-                <input type='text' name='material' />
-                <input type='text' name='total' />
-                <input type='text' name='bill_address' />
-                <input type='text' name='bill_city' />
-                <input type='text' name='bill_state' />
-                <input type='text' name='bill_zip' />
-                <input type='text' name='bill_email' />
-                <input type='text' name='bid_notes' />
+                Bid
+                name <input type='text' name='name' />
+                labor <input type='text' name='labor' />
+                material <input type='text' name='material' />
+         ˘       total <input type='text' name='total' />
+                bill_address <input type='text' name='bill_address' />
+                bill_city <input type='text' name='bill_city' />
+                bill_state <input type='text' name='bill_state' />
+                bill_zip <input type='text' name='bill_zip' />
+                bill_email <input type='text' name='bill_email' />
+                bid_notes <input type='text' name='bid_notes' />
                 <hr>
-                <input type='text' name='half' />
-                <input type='text' name='five' />
-                <input type='text' name='sqr' />
-                <input type='text' name='bull' />
-                <input type='text' name='masking' />
-                <input type='text' name='plastic' />
-                <input type='text' name='fixall' />
-                <input type='text' name='perf' />
-                <input type='text' name='mud' />
-                <input type='text' name='other_name' />
-                <input type='text' name='other_cost' />
-                <input type='text' name='misc' />
-                <input type='text' name='shop_fee' />
-                <input type='text' name='materials_total' />
-                <input type='text' name='scheduling' />
-                <input type='text' name='total_hrs' />
-                <input type='text' name='percent_builder' />
-                <input type='text' name='percent_drywall' />
-                <input type='text' name='notes' />
+                Material
+                half <input type='text' name='half' />
+                five <input type='text' name='five' />
+                sqr <input type='text' name='sqr' />
+                bull <input type='text' name='bull' />
+                masking <input type='text' name='masking' />
+                plastic <input type='text' name='plastic' />
+                fixall <input type='text' name='fixall' />
+                perf <input type='text' name='perf' />
+                mud <input type='text' name='mud' />
+                other_name <input type='text' name='other_name' />
+                other_cost <input type='text' name='other_cost' />
+                misc <input type='text' name='misc' />
+                shop_fee <input type='text' name='shop_fee' />
+                materials_total <input type='text' name='materials_total' />
+                scheduling <input type='text' name='scheduling' />
+                total_hrs <input type='text' name='total_hrs' />
+                percent_builder <input type='text' name='percent_builder' />
+                percent_drywall <input type='text' name='percent_drywall' />
+                notes <input type='text' name='notes' />
                 <hr>
                 <input type="submit" class="btn btn-primary" onclick="save();return false;"/>
                 <hr>
